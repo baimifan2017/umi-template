@@ -1,0 +1,43 @@
+@import '../../../themes/default.less';
+
+.container {
+  position: relative;
+  background: @background;
+  padding: 0;
+  width:100%;
+
+  :global {
+    .form {
+      display: block;
+      position: fixed;
+      width: 520px;
+      height: 600px;
+      top: 50%;
+      margin-top: -200px;
+      left: 50%;
+      margin-left: -240px;
+    }
+
+    .register {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .captcha {
+      display: inline-block;
+      white-space: nowrap;
+      width: 100%;
+
+      & > input {
+        width: 65%;
+        float: left;
+      }
+
+      & > img {
+        width: 35%;
+        max-height: 35px;
+      }
+    }
+  }
+}
